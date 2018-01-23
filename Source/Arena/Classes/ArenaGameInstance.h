@@ -7,6 +7,7 @@
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
 #include "WebConnection.h"
+#include "Engine/StreamableManager.h"
 #include "ArenaGameInstance.generated.h"
 
 /**
@@ -24,4 +25,14 @@ public:
 	
 	UPROPERTY()
 	class UWebConnection* WebConnection;
+
+	UPROPERTY()
+	class UWebConnection* WebConnection_New;
+
+	FStreamableManager AssetLoader;
+
+	//WebConnection::TokenCompleteDeligate에 바인딩 할 함수 정의
+	UFUNCTION()
+	void TokenRequestComplete(const FString& Token);
+
 };

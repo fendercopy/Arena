@@ -9,9 +9,11 @@
 /**
  * 
  */
+//Deligate를 하나 등록해 본다.
+//이 Deligate는 RequestToken()을 호출할때 외부 서버와 통신하는 것을 가정사고 통신이 완료되어 결과물이 서버로 부터 도착 하면 Subscriber(Calee)에게 호출 하는 것으로 한다.
+DECLARE_DELEGATE_OneParam(FTokenCompleteSignature, const FString&);
 
  //WEBSERVICE_API 매크로는 Development 구성에서 __declspec(dllexport) 로 치환되어 모듈의 DLL 로 빌드가된다, shipping 에서는 NULL로 치환되어 .exe로 정적 빌드된다
-
 UCLASS()
 class WEBSERVICE_API UWebConnection : public UObject 
 {
@@ -32,7 +34,13 @@ public:
 	FString Token;
 
 	UFUNCTION()
-		void RequestToken();
+		void RequestToken(const FString& UserID);
+
+	void SendRequestPacket(const FString& Packet);
+	void ReceiveAnswerPacket(const FString& Packet);
+
+
+	FTokenCompleteSignature TokenCompleteDeligate;
 	
 };
 DECLARE_LOG_CATEGORY_EXTERN(WebConnection, Log, All);
