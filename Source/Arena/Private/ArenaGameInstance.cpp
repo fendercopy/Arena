@@ -108,7 +108,7 @@ void UArenaGameInstance::Init(void)
 	//World내에 로딩된 언리얼 오브젝트 순회
 	WebConnection->Host = TEXT("localhost");
 	WebConnection_New->Host = TEXT("127.0.0.1");
-
+	 
 	for (TObjectIterator<UWebConnection> iter; iter; ++iter)
 	{
 		UWebConnection* Comp = *iter;

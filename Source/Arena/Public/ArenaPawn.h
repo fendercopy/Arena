@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -36,7 +36,7 @@ public:
 		class USpringArmComponent* SpringArm;
 	UPROPERTY(BlueprintReadOnly,VisibleAnywhere,Category="Camera")
 		class UCameraComponent* Camera;
-	//config¿¡¼­ ¼öÁ¤ ÇÑ °ªÀ» Àû¿ë ÇÏ·Á¸é ¿¡µğÅÍ¸¦ Àç½ÃÀÛ ÇØ¾ßÇÔ
+	//configì—ì„œ ìˆ˜ì • í•œ ê°’ì„ ì ìš© í•˜ë ¤ë©´ ì—ë””í„°ë¥¼ ì¬ì‹œì‘ í•´ì•¼í•¨
 	UPROPERTY(Config,BlueprintReadWrite,EditDefaultsOnly,Category="Stat")
 		float MaxHP;
 	UPROPERTY(BlueprintReadWrite, EditInstanceOnly, Category = "Stat")

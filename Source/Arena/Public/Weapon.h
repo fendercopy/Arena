@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+ï»¿// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -6,9 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "Weapon.generated.h"
 
-//BlueprintType :: ÀÌ C++Å¬·¡½º´Â ºí·çÇÁ¸°Æ®¿¡¼­ º¯¼ö·Î ¼±¾ğÀÌ °¡´ÉÇÑ Å¸ÀÔÀÌ´Ù
-//Blueprintable : ºí·çÇÁ¸°Æ®¿¡¼­ ÀÌ C++ Å¬·¡½º¸¦ »ì™œ¹Ş¾Æ¼­ »õ·Ó°Ô Å¬·¡½º¸¦ »ì¼Ó¹Ş¾Æ »õ·Ó°³ È®ÀåÇÒ¼ö ÀÖ´Ù)
-//ÇÏÁö¸¸ ÀÌ¹Ì Actor¾Ö¼­ À§ÀÇ ÆÄ¶ó¸ŞÅÍ°¡ »ı¼ºµÇ¾î ÀÖÀ¸¹Ç·Î Ãß°¡·Î ´õÇØµâÇÊ¿ä´Â ¾øÁö¸¸ ¿¹¸¦µé¾î ÇØº½
+//BlueprintType :: ì´ C++í´ë˜ìŠ¤ëŠ” ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œ ë³€ìˆ˜ë¡œ ì„ ì–¸ì´ ê°€ëŠ¥í•œ íƒ€ì…ì´ë‹¤
+//Blueprintable : ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œ ì´ C++ í´ë˜ìŠ¤ë¥¼ ì‚´ì†¢ë°›ì•„ì„œ ìƒˆë¡­ê²Œ í´ë˜ìŠ¤ë¥¼ ì‚´ì†ë°›ì•„ ìƒˆë¡­ê°œ í™•ì¥í• ìˆ˜ ìˆë‹¤)
+//í•˜ì§€ë§Œ ì´ë¯¸ Actorì• ì„œ ìœ„ì˜ íŒŒë¼ë©”í„°ê°€ ìƒì„±ë˜ì–´ ìˆìœ¼ë¯€ë¡œ ì¶”ê°€ë¡œ ë”í•´ë“ˆí•„ìš”ëŠ” ì—†ì§€ë§Œ ì˜ˆë¥¼ë“¤ì–´ í•´ë´„
 //UCLASS(BlueprintType, Blueprintable, config = Engine, meta = (ShortTooltip = "An Actor is an object that can be placed or spawned in the world."))
 
 UCLASS(Config=Game,BlueprintType, Blueprintable)
@@ -27,23 +27,23 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-////¸â¹öº¯¼ö(UPROPERTY)
-	//1.Blueprint ¿¡¼­ÀÇ Á¢±Ù ±ÇÇÑ
-	//BlueprintReadOnly : ºí·çÇÁ¸°Æ®¿¡¼­´Â ÀĞ±â ¸¸ °¡´É
-	//BluepeiintReadWrite : ºí·çÇÁ¸°Æ®¿¡¼­ ÀĞ±â ¾²±â°¡´É
+////ë©¤ë²„ë³€ìˆ˜(UPROPERTY)
+	//1.Blueprint ì—ì„œì˜ ì ‘ê·¼ ê¶Œí•œ
+	//BlueprintReadOnly : ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œëŠ” ì½ê¸° ë§Œ ê°€ëŠ¥
+	//BluepeiintReadWrite : ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œ ì½ê¸° ì“°ê¸°ê°€ëŠ¥
 
-	//2.¿¡µğÅÍ¿¡¼­ÀÇ £ ÆíÁı±ÇÇÑ
-	//Edit~ : ¼öÁ¤°¡´É
-	//Visible~ : ¼öÁ¤ºÒ°¡, È®ÀÎÀº °¡´É
-	//~DefaultsOnly : ¿¡µğÅÍÀÇ ºí·çÇÁ¸°Æ®¿¡¼­ ±× Å¬·¡½º ½ºÄÚÇÁ¿¡¼­ ¼öÁ¤°¡´É
-	//~InstanceOnly : ¿¡µğÅÍÀÇ ·¹º§¿¡ ¹èÄ¡ ÇÑ°æ¿ì (ÀÎ½ºÅÏ½º¸¦ »ı¼º ÇÑ°æ¿ì) ±× ÀÎ½ºÅÏ½º ½ºÄÚÇÁ¿¡¼­ ¼öÁ¤°¡´É
-	//~AnyWhere : µÑ´Ù
-	//´Ù¸¸ InstanceOnly·Î ÇÑ°æ¿ì ºí·çÇÁ¸°Æ® Å¬·¡½º ¾ÖµğÅÍ¿¡¼­µµ ¼öÁ¤°¡´É(DefaultsOnly) ÇûÀ½......
+	//2.ì—ë””í„°ì—ì„œì˜ ê²‚ í¸ì§‘ê¶Œí•œ
+	//Edit~ : ìˆ˜ì •ê°€ëŠ¥
+	//Visible~ : ìˆ˜ì •ë¶ˆê°€, í™•ì¸ì€ ê°€ëŠ¥
+	//~DefaultsOnly : ì—ë””í„°ì˜ ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œ ê·¸ í´ë˜ìŠ¤ ìŠ¤ì½”í”„ì—ì„œ ìˆ˜ì •ê°€ëŠ¥
+	//~InstanceOnly : ì—ë””í„°ì˜ ë ˆë²¨ì— ë°°ì¹˜ í•œê²½ìš° (ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„± í•œê²½ìš°) ê·¸ ì¸ìŠ¤í„´ìŠ¤ ìŠ¤ì½”í”„ì—ì„œ ìˆ˜ì •ê°€ëŠ¥
+	//~AnyWhere : ë‘˜ë‹¤
+	//ë‹¤ë§Œ InstanceOnlyë¡œ í•œê²½ìš° ë¸”ë£¨í”„ë¦°íŠ¸ í´ë˜ìŠ¤ ì• ë””í„°ì—ì„œë„ ìˆ˜ì •ê°€ëŠ¥(DefaultsOnly) í˜”ìŒ......
 
-	//3.¸ŞÅ¸ÁöÁ¤ÀÚ
-	//¿©·¯°¡Áö°¡ ÀÖÀ½
+	//3.ë©”íƒ€ì§€ì •ì
+	//ì—¬ëŸ¬ê°€ì§€ê°€ ìˆìŒ
 	//AllowPrivateAccess : 
-	//		BlueprintÅ¬·¡½º°¡ NativeClass¸¦ »ó¼ÓÇÏ´Â °æ¿ì NativeClassÀÇ Private ÁöÁ¤ÀÚ¾Öµµ ºÒ±¸ÇÏ°í ºí·çÇÁ¸°Æ®¿¡¼­ Á¢±Ù°¡´ÉÇÏ°Ô ÇÔ(Getter¿Í Setter¸¦ ÀÚµ¿»ı¼º ÇØÁØ´Ù°í »ı°¢ÇÏÀÚ)
+	//		Blueprintí´ë˜ìŠ¤ê°€ NativeClassë¥¼ ìƒì†í•˜ëŠ” ê²½ìš° NativeClassì˜ Private ì§€ì •ìì• ë„ ë¶ˆêµ¬í•˜ê³  ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œ ì ‘ê·¼ê°€ëŠ¥í•˜ê²Œ í•¨(Getterì™€ Setterë¥¼ ìë™ìƒì„± í•´ì¤€ë‹¤ê³  ìƒê°í•˜ì)
 	UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
 	class USkeletalMeshComponent* Weapon;
 	UPROPERTY(Config,BlueprintReadWrite, EditDefaultsOnly,Category="Weapon|Damage")
@@ -57,10 +57,10 @@ private:
 	bool bNoDamage;
 
 public:
-//¸â¹öÇÔ¼ö(UFUNCTION)
-	//1.BlueprintCallable : ºí·çÇÁ¸°Æ®¿¡¼­ È£Ãâ°¡´É ´Ù¸¸, Ä«Å×°í¸®¸¦ ²À ÁöÁ¤ÇØÁÖÀÚ
-	//2.BlueprintImplementableEvent : ÀÌ ÇÔ¼öÀÇ ±¸ÇåÀº Blueprint¿¡¼­ ÇÑ´Ù
-	//3.BlueprintNativeEvent : ÀÌ ÇÔ¼öÀÇ ±¸ÇöÀº Native¿¡ ÀÖÁö¸¸ Blueprint¿¡¼­ override ÇÒ ¼ö ÀÖ´Ù
+//ë©¤ë²„í•¨ìˆ˜(UFUNCTION)
+	//1.BlueprintCallable : ë¸”ë£¨í”„ë¦°íŠ¸ì—ì„œ í˜¸ì¶œê°€ëŠ¥ ë‹¤ë§Œ, ì¹´í…Œê³ ë¦¬ë¥¼ ê¼­ ì§€ì •í•´ì£¼ì
+	//2.BlueprintImplementableEvent : ì´ í•¨ìˆ˜ì˜ êµ¬í—Œì€ Blueprintì—ì„œ í•œë‹¤
+	//3.BlueprintNativeEvent : ì´ í•¨ìˆ˜ì˜ êµ¬í˜„ì€ Nativeì— ìˆì§€ë§Œ Blueprintì—ì„œ override í•  ìˆ˜ ìˆë‹¤
 	UFUNCTION(BlueprintCallable,Category="Weapon|Damage")
 	float GetCalcDamage()
 	{
